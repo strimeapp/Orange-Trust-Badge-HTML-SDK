@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Charset definition -->
+        <meta charset="UTF-8" />
+
+        <!-- Mobile properties -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> Orange Trust Badge | HTML SDK</title>
+
+        <!-- Meta tags -->
+        <meta name="description" content="A simple HTML Framework to install the Orange Trust Badge on a website.">
+	    <meta name="author" content="Romain Biard - Strime">
+	    <meta name="keywords" content="orange, trust badge">
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+            
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+                
+        <!-- Favicon -->
+        <link rel="icon shortcut" type="image/x-icon" href="assets/img/favicon.ico" />
+    </head>
+    <body class="trust-badge">
+
+		<div class="wrapper">
+
+			<h1>Badge de confiance</h1>
+			
+			<div id="banner-trust-badge"></div>
+
+			<div class="excerpt">
+				Le Badge de Confiance est une initiative lancée par Orange.<br />
+				En tant que partenaire de cette initiative, nous nous engageons à vous informer des données que nous collectons, de l'usage qui en est fait, et de la manière de les administrer.
+			</div>
+
+			<h2><i class="fa fa-user" aria-hidden="true"></i> Mon identité</h2>
+
+			<div>
+				<a href="#" class="faq-question" title="Quelles sont les données que vous collectez ?" data-target="#trust-badge-data-collected">
+					<i class="fa fa-caret-right" aria-hidden="true"></i> Quelles sont les données que vous collectez ?
+				</a>
+				<div class="faq-answer" id="trust-badge-data-collected">
+					<p>
+						FooBar collecte vos prénom et nom, ainsi que votre adresse email.
+					</p>
+					<p>
+						Si vous choisissez une de nos offres payantes, nous vous demanderons de fournir également une adresse postale pour l'édition de la facture. Vous pourrez supprimer cette donnée dans <a href="{{ path('app_profile_billing') }}" title="votre compte">votre compte</a>, dès lors que vous repasserez sur l'offre gratuite.
+					</p>
+				</div>
+			</div>
+
+			<hr>
+
+			<h2><i class="fa fa-bar-chart" aria-hidden="true"></i> Analytics</h2>
+
+			<div>
+				<a href="#" class="faq-question" title="Quels outils de statistique utilisez-vous ?" data-target="#trust-badge-analytics-tools">
+					<i class="fa fa-caret-right" aria-hidden="true"></i> Quels outils de statistique utilisez-vous ?
+				</a>
+				<div class="faq-answer" id="trust-badge-analytics-tools">
+					<p>
+						Nous outilisons Google Analytics pour mesurer le trafic qu'il y a sur notre plateforme.
+					</p>
+					<p>
+						Nous nous servons également de cet outil pour obtenir des statistiques sur la provenance de nos visiteurs, que ce soit d'un point de vue géographique ou pour connaître les sites qui leur ont permis de connaître FooBar.
+					</p>
+				</div>
+			</div>
+
+			<hr>
+
+			<h2><i class="fa fa-money" aria-hidden="true"></i> Mes données bancaires</h2>
+
+			<div>
+				<a href="#" class="faq-question" title="Que faites-vous de mes coordonnées bancaires ?" data-target="#trust-badge-payment-data">
+					<i class="fa fa-caret-right" aria-hidden="true"></i> Que faites-vous de mes coordonnées bancaires ?
+				</a>
+				<div class="faq-answer" id="trust-badge-payment-data">
+					<p>
+						Nous ne stockons aucune donnée bancaire sur FooBar.
+					</p>
+					<p>
+						Nous travaillons avec une solution de paiement nommée <a href="http://stripe.com/" title="Stripe" target="_blank">Stripe</a> qui se charge de gérer vos coordonnées bancaires, et d'effectuer les prélèvements.
+					</p>
+					<p>
+						Stripe est un partenaire de confiance. Cette solution est celle retenue par plus de <a href="http://www.frenchweb.fr/la-licorne-stripe-part-a-la-conquete-du-marche-francais/246015" title="Stripe et le marché français" target="_blank">2 sociétés sur 3</a> qui se créent, et effectuant de la vente en ligne en France.
+					</p>
+				</div>
+			</div>
+
+			<hr>
+
+			<iframe frameborder="0" width="100%" height="400" src="//www.dailymotion.com/embed/video/x3xxl13" allowfullscreen></iframe><br /><a href="http://www.dailymotion.com/video/x3xxl13_badge-de-confiance_tech" target="_blank">Badge de confiance</a> <i>par <a href="http://www.dailymotion.com/Orange" target="_blank">Orange</a></i>
+
+		</div>
+
+		<script src="assets/js/jquery-3.1.1.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				// If the user clicks on a question
+				$(document).on("click", "a.faq-question", function(e) {
+
+					// Prevent the scroll
+					e.preventDefault();
+
+					// Get the target
+					var faqTarget = $(this).attr("data-target");
+
+					// Toggle the answer
+					$(faqTarget).slideToggle();
+
+					// Toggle a class
+					if( $(this).hasClass("visible") )
+						$(this).removeClass("visible");
+					else
+						$(this).addClass("visible");
+				});
+
+			});
+		</script>
+
+	</body>
+</html>
