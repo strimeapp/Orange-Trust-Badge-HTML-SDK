@@ -14,7 +14,7 @@ Among the files of this package, you will find :
 - a banner which was initially used on Orange website
 
 ## License
-As the other SDK of this project initiated by Orange, this package is licensed under the open source Apache License.
+As the other SDKs of this project initiated by Orange, this package is licensed under the open source Apache License.
 
 ## Contact
 Romain BIARD, [romain@strime.io](mailto://romain@strime.io)
