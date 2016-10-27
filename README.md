@@ -15,3 +15,6 @@ Among the files of this package, you will find :
 
 ## License
 As the other SDK of this project initiated by Orange, this package is licensed under the open source Apache License.
+
+## Contact
+Romain BIARD, [romain@strime.io](mailto://romain@strime.io)
