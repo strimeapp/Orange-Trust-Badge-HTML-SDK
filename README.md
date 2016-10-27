@@ -3,7 +3,7 @@ This repository hosts a simple HTML integration of the Orange Trust Badge.
 
 ## Integration
 You will find here all the necessary files to reproduce such an integration.
-The content **has to** be personalized based on your needs. This example is based on [Strime](https://www.strime.io)'s integration of this badge.
+The content **has to** be personalized based on your needs. This example is based on [Strime](https://www.strime.io)'s [integration](https://www.strime.io/trust-badge) of this badge.
 
 ## Content of the package
 Among the files of this package, you will find :
